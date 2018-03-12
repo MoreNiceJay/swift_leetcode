@@ -124,14 +124,22 @@ var str = "Hello, playground"
         l2.next  = ListNode(6)
         l2.next?.next = ListNode(4)
 
-        var a = Solution()
-        while( a.addTwoNumbers(l1, l2)?.next != nil){
-            print(l1.val)
-            //optional value error with a question mark.
-            l1 = l1.next!
-            
-        }
-        print (l1.val)
+
+var a = Solution()
+var l3 = a.addTwoNumbers(l1, l2)
+while l3 != nil {
+    print(l3!.val) // or print(l3!.val) because we sure it is not nil.
+    l3 = l3?.next
+}
+
+//        var a = Solution()
+//        while( a.addTwoNumbers(l1, l2)?.next != nil){
+//            print(l1.val)
+//            //optional value error with a question mark.
+//            l1 = l1.next!
+    
+//        }
+//        print (l1.val)
 
 
 
